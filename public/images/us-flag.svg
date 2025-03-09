@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1235 650">
+  <rect width="1235" height="650" fill="#bf0a30"/>
+  <g fill="#ffffff">
+    <rect y="50" width="1235" height="50"/>
+    <rect y="150" width="1235" height="50"/>
+    <rect y="250" width="1235" height="50"/>
+    <rect y="350" width="1235" height="50"/>
+    <rect y="450" width="1235" height="50"/>
+    <rect y="550" width="1235" height="50"/>
+  </g>
+  <rect width="494" height="350" fill="#002868"/>
+  <g fill="#ffffff">
+    <g id="s5">
+      <g id="s4">
+        <g id="s3">
+          <g id="s2">
+            <g id="s1">
+              <g id="s">
+                <polygon points="16,0 20,11 29,11 22,17 25,28 16,21 7,28 10,17 3,11 12,11"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+  <use xlink:href="#s" transform="translate(59)"/>
+  <use xlink:href="#s" transform="translate(118)"/>
+  <use xlink:href="#s" transform="translate(177)"/>
+  <use xlink:href="#s" transform="translate(236)"/>
+  <use xlink:href="#s" transform="translate(295)"/>
+  <use xlink:href="#s" transform="translate(354)"/>
+  <use xlink:href="#s" transform="translate(413)"/>
+  <use xlink:href="#s" transform="translate(29,35)"/>
+  <use xlink:href="#s" transform="translate(88,35)"/>
+  <use xlink:href="#s" transform="translate(147,35)"/>
+  <use xlink:href="#s" transform="translate(206,35)"/>
+  <use xlink:href="#s" transform="translate(265,35)"/>
+  <use xlink:href="#s" transform="translate(324,35)"/>
+  <use xlink:href="#s" transform="translate(383,35)"/>
+  <use xlink:href="#s" transform="translate(442,35)"/>
+</svg> 
