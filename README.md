@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Immigration Plain Language Guide
+
+A user-friendly web application designed to make U.S. immigration processes more accessible and understandable for everyone. This project simplifies complex immigration forms and procedures using plain language explanations.
+
+## Features
+
+- 🏠 **Interactive Homepage**: Clear navigation to all resources
+- 📝 **Form Guides**: Step-by-step instructions for common immigration forms
+  - Form I-130 (Petition for Alien Relative)
+  - Form I-485 (Application to Register Permanent Residence)
+  - Detailed requirements and common mistakes to avoid
+- ✅ **I-130 Status Checker**: Interactive tool to check your I-130 petition status
+- 📚 **Immigration Quiz**: Test your knowledge of immigration processes
+- 🗺️ **Immigration Roadmap**: Visual guide to immigration pathways
+- 🔍 **Resource Center**: Curated list of helpful immigration resources
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18.x or later
+- npm (Node Package Manager)
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/marlanamc/immigration_plain_lang.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Navigate to the project directory:
+```bash
+cd immigration_plain_lang
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Install dependencies:
+```bash
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Run the development server:
+```bash
+npm run dev
+```
 
-## Learn More
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
-To learn more about Next.js, take a look at the following resources:
+### Building for Production
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To create a production build:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build
+```
 
-## Deploy on Vercel
+To start the production server:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Technology Stack
+
+- **Framework**: Next.js 15.2
+- **Styling**: Tailwind CSS
+- **Language**: TypeScript
+- **Deployment**: [Add deployment platform when decided]
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Disclaimer
+
+This website is for informational purposes only and does not constitute legal advice. Always verify current procedures and requirements with USCIS or consult with an immigration attorney for legal advice.
+
+## License
+
+[Add your chosen license]
