@@ -6,8 +6,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/immigration_plain_lang',
-  assetPrefix: '/immigration_plain_lang/',
+  // Remove basePath and assetPrefix for root deployment
+  // basePath: '/immigration_plain_lang',
+  // assetPrefix: '/immigration_plain_lang/',
 }
 
 module.exports = nextConfig 
