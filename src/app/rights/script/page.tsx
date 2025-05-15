@@ -14,9 +14,9 @@ interface ScenarioData {
   spanish: ScenarioContent;
 }
 
-interface Scenarios {
-  [key: string]: ScenarioData;
-}
+type Scenarios = {
+  [K in Scenario]: ScenarioData;
+};
 
 export default function ScriptGeneratorPage() {
   const [selectedScenario, setSelectedScenario] = useState<Scenario | ''>('');
@@ -85,6 +85,10 @@ export default function ScriptGeneratorPage() {
     }
   };
 
+  const isScenario = (value: string): value is Scenario => {
+    return value === 'door' || value === 'street' || value === 'workplace';
+  };
+
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold text-center mb-8">Rights Script Generator</h1>
@@ -108,7 +112,14 @@ export default function ScriptGeneratorPage() {
           <label className="block text-sm font-medium text-gray-700 mb-2">Select Scenario</label>
           <select
             value={selectedScenario}
-            onChange={(e) => setSelectedScenario(e.target.value as Scenario)}
+            onChange={(e) => {
+              const value = e.target.value;
+              if (isScenario(value)) {
+                setSelectedScenario(value);
+              } else {
+                setSelectedScenario('');
+              }
+            }}
             className="w-full p-2 border rounded-md"
           >
             <option value="">Choose a scenario...</option>
@@ -119,7 +130,7 @@ export default function ScriptGeneratorPage() {
         </div>
 
         {/* Phrases Display */}
-        {selectedScenario && (
+        {selectedScenario && isScenario(selectedScenario) && (
           <div className="bg-white rounded-xl shadow-md p-6">
             <h2 className="text-xl font-semibold mb-4">
               {scenarios[selectedScenario][language].title}
