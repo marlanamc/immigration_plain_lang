@@ -32,11 +32,11 @@ jobs:
           echo "Starting build process..."
           npm run build
           echo "Build completed. Checking output directory..."
-          ls -la .next/
+          ls -la out/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .next/static
+          path: out
 
   deploy:
     environment:
