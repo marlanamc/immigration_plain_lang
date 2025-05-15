@@ -1,11 +1,28 @@
 'use client';
 import { useState } from 'react';
 
-export default function ScriptGeneratorPage() {
-  const [selectedScenario, setSelectedScenario] = useState('');
-  const [language, setLanguage] = useState('english');
+type Language = 'english' | 'spanish';
+type Scenario = 'door' | 'street' | 'workplace';
 
-  const scenarios = {
+interface ScenarioContent {
+  title: string;
+  phrases: string[];
+}
+
+interface ScenarioData {
+  english: ScenarioContent;
+  spanish: ScenarioContent;
+}
+
+interface Scenarios {
+  [key: string]: ScenarioData;
+}
+
+export default function ScriptGeneratorPage() {
+  const [selectedScenario, setSelectedScenario] = useState<Scenario | ''>('');
+  const [language, setLanguage] = useState<Language>('english');
+
+  const scenarios: Scenarios = {
     door: {
       english: {
         title: "At Your Door",
@@ -78,7 +95,7 @@ export default function ScriptGeneratorPage() {
           <label className="block text-sm font-medium text-gray-700 mb-2">Select Language</label>
           <select
             value={language}
-            onChange={(e) => setLanguage(e.target.value)}
+            onChange={(e) => setLanguage(e.target.value as Language)}
             className="w-full p-2 border rounded-md"
           >
             <option value="english">English</option>
@@ -91,7 +108,7 @@ export default function ScriptGeneratorPage() {
           <label className="block text-sm font-medium text-gray-700 mb-2">Select Scenario</label>
           <select
             value={selectedScenario}
-            onChange={(e) => setSelectedScenario(e.target.value)}
+            onChange={(e) => setSelectedScenario(e.target.value as Scenario)}
             className="w-full p-2 border rounded-md"
           >
             <option value="">Choose a scenario...</option>
